@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEB3B"
+    android:divider="@drawable/ic_launcher_background"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Szyfr"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:lineSpacingExtra="30sp"
+        android:text="SZYFR CEZARA"
+        android:textAlignment="center"
+        android:textColor="@color/niebieski"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:typeface="serif" />q1`
+
+    <TextView
+        android:id="@+id/Opis"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:text="Szyfr wymyślony, według legendy, przez Gajusza Juliusza Cezara. Polega na przesunięciu danejgo znaku o określoną liczbę miejsc w wyznaczonym wzorcu."
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/oryginalText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Wpisz tekst do zakodowania"
+        android:inputType="text"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Podaj przesunięcie - dodatnią liczbę całkowitą"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/CodedText"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:lineSpacingExtra="8sp"
+        android:text="Rezultat kodowania lub dekodowania"
+        android:textAlignment="textStart"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/Code"
+        android:layout_width="194dp"
+        android:layout_height="100dp"
+        android:layout_gravity="clip_horizontal|center_horizontal|center_vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#E44F4F"
+        android:onClick="encrypt"
+        android:text="Koduj"
+        android:textAlignment="center"
+        android:textColor="@color/niebieski"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/Decode"
+        android:layout_width="194dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:background="#FF9800"
+        android:onClick="decrypt"
+        android:text="Dekoduj"
+        android:textColor="@color/zielony"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
